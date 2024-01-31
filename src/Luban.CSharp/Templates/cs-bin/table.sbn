@@ -32,6 +32,7 @@ using Luban;
 {{~if __table.comment != '' ~}}
 /// <summary>
 /// {{escape_comment __table.comment}}
+/// mysqlTableName:{{ __mysqlTableName}}
 /// </summary>
 {{~end~}}
 public partial class {{__name}}

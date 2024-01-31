@@ -93,8 +93,9 @@ public class ExcelSchemaLoader : SchemaLoaderBase
             // string patchInput = (data.GetField("patch_input") as DString).Value.Trim();
             string tags = (data.GetField("tags") as DString).Value.Trim();
             string outputFile = (data.GetField("output") as DString).Value.Trim();
+            string mysqlTableName = (data.GetField("mysqltablename") as DString).Value.Trim();
             // string options = (data.GetField("options") as DString).Value.Trim(); 
-            var table = SchemaLoaderUtil.CreateTable(fileName, name, module, valueType, index, mode, group, comment, readSchemaFromFile, inputFile, tags, outputFile);
+            var table = SchemaLoaderUtil.CreateTable(fileName, name, module, valueType, index, mode, group, comment, readSchemaFromFile, inputFile, tags, outputFile, mysqlTableName);
             Collector.Add(table);
         };
     }

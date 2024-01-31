@@ -22,6 +22,8 @@ public abstract class DefTypeBase
 
     public string Comment { get; protected set; }
 
+    public string MysqlTableName { get; set; }
+
     public Dictionary<string, string> Tags { get; protected set; }
 
     public List<TypeMapper> TypeMappers { get; protected set; }

@@ -25,4 +25,6 @@ public class RawTable
     public List<string> InputFiles { get; set; } = new();
 
     public string OutputFile { get; set; }
+
+    public string MysqlTableName { get; set; }
 }

@@ -25,6 +25,7 @@ public class DefTable : DefTypeBase
         ReadSchemaFromFile = b.ReadSchemaFromFile;
         Tags = b.Tags;
         _outputFile = b.OutputFile;
+        MysqlTableName = b.MysqlTableName;
     }
 
     public string Index { get; private set; }
