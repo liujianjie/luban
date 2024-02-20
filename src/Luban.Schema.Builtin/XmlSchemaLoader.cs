@@ -150,6 +150,7 @@ public class XmlSchemaLoader : SchemaLoaderBase
         "group",
         "comment",
         "tags",
+        "sfieldname"
     };
 
     private static readonly List<string> _fieldRequireAttrs = new() { "name", "type" };
@@ -176,7 +177,8 @@ public class XmlSchemaLoader : SchemaLoaderBase
             XmlUtil.GetOptionalAttribute(e, "group"),
             XmlUtil.GetOptionalAttribute(e, "comment"),
             XmlUtil.GetOptionalAttribute(e, "tags"),
-            false
+            false,
+            XmlUtil.GetOptionalAttribute(e, "sfieldname")
         );
     }
 

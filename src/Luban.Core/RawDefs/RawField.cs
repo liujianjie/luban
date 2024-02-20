@@ -13,4 +13,5 @@ public class RawField
     public bool NotNameValidation { get; set; }
 
     public List<string> Groups { get; set; }
+    public string SFieldName { get; set; }
 }

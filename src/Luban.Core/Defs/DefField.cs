@@ -29,6 +29,8 @@ public class DefField
 
     public bool IgnoreNameValidation { get; set; }
 
+    public string SFieldName { get; set; }
+
     public bool HasTag(string attrName)
     {
         return Tags != null && Tags.ContainsKey(attrName);
@@ -49,9 +51,10 @@ public class DefField
         HostType = host;
         Name = f.Name;
         Type = f.Type;
-        Comment = f.Comment;
+        Comment = f.SFieldName;
         Tags = f.Tags;
         IgnoreNameValidation = f.NotNameValidation;
+        SFieldName = f.SFieldName;
         this.Groups = f.Groups;
         this.RawField = f;
     }

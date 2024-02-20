@@ -221,6 +221,7 @@ public class ExcelSchemaLoader : SchemaLoaderBase
                 new() { Name = "group", Type = "string" },
                 new() { Name = "comment", Type = "string" },
                 new() { Name = "tags", Type = "string" },
+                new() { Name = "sfieldname", Type = "string" },
             }
         })
         {
@@ -252,6 +253,7 @@ public class ExcelSchemaLoader : SchemaLoaderBase
                 new() { Name = "tags", Type = "string" },
                 new() { Name = "group", Type = "string" },
                 new() { Name = "fields", Type = "list,__FieldInfo__" },
+                new() { Name = "sfieldname", Type = "string" },
             }
         })
         {
@@ -302,7 +304,8 @@ public class ExcelSchemaLoader : SchemaLoaderBase
                     (b.GetField("group") as DString).Value,
                     (b.GetField("comment") as DString).Value.Trim(),
                     (b.GetField("tags") as DString).Value.Trim(),
-                    false
+                    false,
+                    (b.GetField("sfieldname") as DString).Value.Trim()
                 )).ToList(),
             };
             Collector.Add(curBean);
