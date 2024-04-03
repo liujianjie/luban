@@ -111,9 +111,6 @@ public {{class_modifier __bean}} partial class {{__name}} : {{if parent_def_type
     // {{format_property_name __code_style field.name}}sfieldname:{{field.sfield_name}}
     {{~end~}}
     public readonly {{declaring_type_name field.ctype}} {{format_property_name __code_style field.name}};
-    {{~if field.ctype.is_text~}}
-    public string {{field.name}}_Il18n { get { return LanguageKit.Get({{field.name}}); } }
-    {{~end~}}
     {{~if can_generate_ref field~}}
     public {{declaring_type_name (get_ref_type field)}} {{get_ref_name field}};
     {{~else if can_generate_collection_ref field~}}
