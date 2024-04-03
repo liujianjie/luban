@@ -6,16 +6,18 @@ namespace Luban.Types;
 
 public abstract class TType
 {
+    public bool isText { get; }
     public bool IsNullable { get; }
 
     public Dictionary<string, string> Tags { get; }
 
     public List<IDataValidator> Validators { get; } = new();
 
-    protected TType(bool isNullable, Dictionary<string, string> tags)
+    protected TType(bool isNullable, Dictionary<string, string> tags, bool isText = false)
     {
         IsNullable = isNullable;
         Tags = tags ?? new Dictionary<string, string>();
+        this.isText = isText;
     }
 
     public abstract string TypeName { get; }

@@ -51,7 +51,7 @@ public class DefField
         HostType = host;
         Name = f.Name;
         Type = f.Type;
-        Comment = f.SFieldName;
+        Comment = f.Comment;
         Tags = f.Tags;
         IgnoreNameValidation = f.NotNameValidation;
         SFieldName = f.SFieldName;

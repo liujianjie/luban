@@ -4,14 +4,14 @@ namespace Luban.Types;
 
 public class TString : TType
 {
-    public static TString Create(bool isNullable, Dictionary<string, string> tags)
+    public static TString Create(bool isNullable, Dictionary<string, string> tags, bool isText = false)
     {
-        return new TString(isNullable, tags);
+        return new TString(isNullable, tags, isText);
     }
 
     public override string TypeName => "string";
 
-    private TString(bool isNullable, Dictionary<string, string> tags) : base(isNullable, tags)
+    private TString(bool isNullable, Dictionary<string, string> tags, bool isText) : base(isNullable, tags, isText)
     {
     }
 
