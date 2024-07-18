@@ -260,7 +260,7 @@ class ExcelStreamDataCreator : ITypeFuncVisitor<ExcelStream, DType>
         }
         else
         {
-            if (type.IsNullable)
+            if (type.IsNullable && x == null)
             {
                 string subType = x.Read().ToString().Trim();
                 if (subType == FieldNames.BeanNullType)
